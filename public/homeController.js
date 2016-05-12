@@ -23,13 +23,13 @@ function home($http, $scope, $location, addService) {
   $scope.get = function () {
     pastePDF($scope.linkUrl, 'pdf-field');
   }
-  $scope.default = function () {
-    $scope.linkUrl = 'https://s3.amazonaws.com/pdf-canvas-test/test.pdf';
+  $scope.default = function (num) {
+    $scope.linkUrl = 'https://s3.amazonaws.com/pdf-canvas-test/test'+ num + '.pdf';
     pastePDF($scope.linkUrl, 'pdf-field');
   }
 
   function activate() {
-    $scope.linkUrl = 'https://s3.amazonaws.com/pdf-canvas-test/test.pdf';
+    $scope.linkUrl = 'https://s3.amazonaws.com/pdf-canvas-test/test1.pdf';
     setTimeout(function () {
       pastePDF($scope.linkUrl, 'pdf-field');
     }, 1000)
