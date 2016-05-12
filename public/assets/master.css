@@ -1,0 +1,22 @@
+#pdf-field {
+  position: absolute;
+  overflow: hidden;
+  width: 890px;
+  height: 690px;
+  z-index: 10;
+}
+
+#canvas {
+  cursor: crosshair;
+  position: absolute;
+  background-color: rgba(154, 154, 154, 0.1);
+  width: 890px;
+  height: 690px;
+  z-index: 100;
+}
+
+.box {
+  width: 890px;
+  height: 690px;
+  z-index: 0;
+}
