@@ -9,12 +9,28 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
+      <form class="" ng-submit="get();">
+        <div class="form-group">
+          <input type="text" ng-model="linkUrl" class='form-control'>
+        </div>
+        <button class='btn btn-default btn-sm' type="submit" name="button">Change link</button>
+        <button class='btn btn-default btn-sm' ng-click='default(1)' name="button">Use the PDF 1</button>
+        <button class='btn btn-default btn-sm' ng-click='default(2)' name="button">Use the PDF 2</button>
+      </form>
+      <hr>
+      <button class='btn btn-primary btn-xs' ng-click='canvas = !canvas' name="button">
+        Toggle Canvas
+      </button>
+      <span ng-hide='!canvas'>Canvas is now On, you can draw on top of the pdf.</span>
+      <span ng-hide='canvas'>Canvas is now Off.</span>
+      <hr>
       <pdf-box></pdf-box>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf">Adobe pdf open param</a>
+      <hr>
+      <a class='btn' href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_open_parameters.pdf">Adobe pdf open param</a>
+      <a class='btn' ng-click='saveToImg()'>Save PNG(canvas)</a>
+      <a class='btn' ng-click='saveToImgHtml()'>Save PNG(html2canvas)</a>
+      <a class='btn' ng-click='saveAsPdf()'>Save PDF</a>
+      <a class='btn' ng-click='pdfToPng()'>Convert PDF to PNG</a>
     </div>
   </div>
 </div>

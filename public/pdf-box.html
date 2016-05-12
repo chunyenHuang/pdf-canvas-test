@@ -1,21 +1,5 @@
-<form class="" ng-submit="get();">
-  <div class="form-group">
-    <input type="text" ng-model="linkUrl" class='form-control'>
-  </div>
-  <button class='btn btn-default btn-sm' type="submit" name="button">Change link</button>
-  <button class='btn btn-default btn-sm' ng-click='default(1)' name="button">Use the PDF 1</button>
-  <button class='btn btn-default btn-sm' ng-click='default(2)' name="button">Use the PDF 2</button>
-</form>
-<hr>
-<button class='btn btn-primary btn-xs' ng-click='canvas = !canvas' name="button">
-  Toggle Canvas
-</button>
-<span ng-hide='!canvas'>Canvas is now On, you can draw on top of the pdf.</span>
-<span ng-hide='canvas'>Canvas is now Off.</span>
-
-<hr>
-<div class="box">
+<div id="box">
   <canvas drawing id='canvas' ng-show='canvas' width='890px' height="690px"></canvas>
+  <div id="PNG-field"><img src={{pngUrl}} id='theImg'></div>
   <div id="pdf-field"></div>
 </div>
-<hr>

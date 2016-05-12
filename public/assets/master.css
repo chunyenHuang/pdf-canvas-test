@@ -6,6 +6,20 @@
   z-index: 10;
 }
 
+#PNG-field {
+  cursor: crosshair;
+  position: absolute;
+  background-color: rgba(154, 154, 154, 0.1);
+  width: 890px;
+  height: 690px;
+  z-index: 50;
+}
+
+#PNG-field img{
+  width: 100%;
+  z-index: 55;
+}
+
 #canvas {
   cursor: crosshair;
   position: absolute;
@@ -15,8 +29,12 @@
   z-index: 100;
 }
 
-.box {
+#box {
   width: 890px;
   height: 690px;
-  z-index: 0;
+  z-index: 200;
+}
+
+a[ng-click] {
+  cursor: pointer;
 }
